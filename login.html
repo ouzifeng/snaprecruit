@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - SnapRecruit</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-clipboard-list"></i> SnapRecruit
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="features.html" class="nav-link">Features</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <div class="container">
+          <div class="form-container">
+            <div class="text-center" style="margin-bottom: 2rem">
+              <div style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <h1 style="margin-bottom: 0.5rem">Welcome Back</h1>
+              <p style="color: #64748b">Sign in to your SnapRecruit account</p>
+            </div>
+
+            <form action="#" method="POST" onsubmit="handleLogin(event)">
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  required
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-input"
+                  required
+                  placeholder="Enter your password"
+                />
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                <label
+                  style="
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.875rem;
+                    color: #64748b;
+                  "
+                >
+                  <input type="checkbox" style="margin-right: 0.5rem" />
+                  Remember me
+                </label>
+                <a
+                  href="#"
+                  style="
+                    font-size: 0.875rem;
+                    color: #3b82f6;
+                    text-decoration: none;
+                  "
+                  >Forgot password?</a
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="width: 100%; margin-bottom: 1.5rem"
+              >
+                Sign In
+              </button>
+
+              <div style="text-align: center; margin-bottom: 1.5rem">
+                <span style="color: #94a3b8">or</span>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-outline"
+                style="width: 100%; margin-bottom: 1rem"
+                onclick="handleSocialLogin('google')"
+              >
+                <i class="fab fa-google" style="margin-right: 0.5rem"></i>
+                Sign in with Google
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-outline"
+                style="width: 100%; margin-bottom: 1.5rem"
+                onclick="handleSocialLogin('linkedin')"
+              >
+                <i class="fab fa-linkedin" style="margin-right: 0.5rem"></i>
+                Sign in with LinkedIn
+              </button>
+
+              <div class="text-center">
+                <p style="color: #64748b">
+                  Don't have an account?
+                  <a
+                    href="signup.html"
+                    style="
+                      color: #3b82f6;
+                      text-decoration: none;
+                      font-weight: 600;
+                    "
+                    >Sign up for free</a
+                  >
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-gray">
+        <div class="container text-center">
+          <h2 style="margin-bottom: 2rem">Trusted by Growing Teams</h2>
+
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 3rem;
+              flex-wrap: wrap;
+            "
+          >
+            <div style="color: #94a3b8; font-size: 1.25rem; font-weight: 600">
+              TechStart
+            </div>
+            <div style="color: #94a3b8; font-size: 1.25rem; font-weight: 600">
+              InnovateCo
+            </div>
+            <div style="color: #94a3b8; font-size: 1.25rem; font-weight: 600">
+              StartupXYZ
+            </div>
+            <div style="color: #94a3b8; font-size: 1.25rem; font-weight: 600">
+              GrowthLab
+            </div>
+          </div>
+
+          <div
+            style="
+              margin-top: 3rem;
+              max-width: 600px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            <p style="color: #64748b; font-style: italic; font-size: 1.125rem">
+              "SnapRecruit has transformed our hiring process. We went from
+              chaos to organized efficiency in just one week."
+            </p>
+            <p style="margin-top: 1rem; color: #374151; font-weight: 600">
+              — Sarah Chen, CEO at TechStart
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>SnapRecruit</h4>
+            <p>
+              Lightweight ATS for startups. Streamline your hiring process with
+              our intuitive platform.
+            </p>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Product</h4>
+            <ul class="footer-links">
+              <li><a href="features.html">Features</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="#">Integrations</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul class="footer-links">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 SnapRecruit. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      // Login form handler
+      function handleLogin(event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const email = formData.get("email");
+        const password = formData.get("password");
+
+        // Simulate login process
+        const button = event.target.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
+
+        button.textContent = "Signing in...";
+        button.disabled = true;
+
+        setTimeout(() => {
+          alert("Login successful! Redirecting to dashboard...");
+          // In a real app, you would redirect to the dashboard
+          button.textContent = originalText;
+          button.disabled = false;
+        }, 1500);
+      }
+
+      // Social login handler
+      function handleSocialLogin(provider) {
+        alert(`Redirecting to ${provider} login...`);
+        // In a real app, you would redirect to OAuth provider
+      }
+
+      // Add enter key support for form
+      document.addEventListener("keypress", function (e) {
+        if (e.key === "Enter" && e.target.matches("input")) {
+          const form = e.target.closest("form");
+          if (form) {
+            form.dispatchEvent(new Event("submit"));
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
